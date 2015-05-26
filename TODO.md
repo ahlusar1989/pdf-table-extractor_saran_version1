@@ -1,9 +1,5 @@
 TODO
 ====
-This list is in no particular order, and things will get done
-when/if I need them or I have spare time :) 
-
---ijm.
 
 
 Line finding
