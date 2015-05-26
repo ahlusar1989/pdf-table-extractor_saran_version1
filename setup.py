@@ -19,6 +19,8 @@ setup(name='pdf-table-extract',
       # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     ],
     keywords='PDF, tables',
+    author = 'Ian McEwan',
+    url = 'ashimaresearch.com',
     license='MIT-Expat',
     packages=find_packages('src'),
     package_dir = {'': 'src'},include_package_data=True,

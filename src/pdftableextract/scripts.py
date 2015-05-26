@@ -41,7 +41,7 @@ def procargs() :
   p.add_argument("-checkdivs",  action="store_true",
      help = "Stop after finding dividors, and output debuging image." )
   p.add_argument("-checkcells", action="store_true",
-     help = "Stop after finding cells, and output debuging image." )
+     help = "Stop after finding cells, and output debugging image." )
   p.add_argument("-colmult", type=float, default=1.0,
      help = "color cycling multiplyer for checkcells and chtml" )
   p.add_argument("-boxes", action="store_true",

@@ -18,9 +18,7 @@ def check_for_required_executable(name,command):
         with open(os.devnull, "w") as fnull:
             result=subprocess.check_call(command,stdout=fnull, stderr=fnull)
     except OSError as e:
-        message = """Error running {0}.
-Command failed: {1}
-{2}""".format(name, " ".join(command), e)
+        message = """Error running {0}.Command failed: {1}{2}""".format(name, " ".join(command), e)
         raise OSError(message)
     except subprocess.CalledProcessError as e:
         raise
@@ -84,7 +82,7 @@ def process_page(infile, pgs,
       stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True )
 
 #-----------------------------------------------------------------------
-# image load secion.
+# image load secion. This may not be necessary
 
   (maxval, width, height, data) = readPNM(p.stdout)
 
@@ -404,7 +402,8 @@ def o_cells_xml(cells,pgs, outfile=None,infile=None, name=None, output_type=None
     root.setAttribute("name",name)
   for cl in cells :
     x = doc.createElement("cell")
-    map(lambda(a): x.setAttribute(*a), zip("xywhp",map(str,cl)))
+    map(lambda a: x.setAttribute(*a), zip("xywhp",map(str,cl)))
+    # map(lambda(a): x.setAttribute(*a), zip("xywhp",map(str,cl)))
     if cl[5] != "" :
       x.appendChild( doc.createTextNode(cl[5]) )
     root.appendChild(x)

@@ -1,5 +1,5 @@
 # Description : PDF Table Extraction Utility
-#      Author : Ian McEwan, Ashima Research.
+#  Original Author : Ian McEwan, Ashima Research.
 #  Maintainer : ijm
 #     Lastmod : 20130402 (ijm)
 #     License : Copyright (C) 2011 Ashima Research. All rights reserved.
